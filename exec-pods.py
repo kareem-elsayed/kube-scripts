@@ -4,9 +4,9 @@ from kubernetes.client.apis import core_v1_api
 from kubernetes.stream import stream
 
 config.load_kube_config()
-c = Configuration()
-c.assert_hostname = False
-Configuration.set_default(c)
+conf = Configuration()
+conf.assert_hostname = False
+Configuration.set_default(conf)
 api = core_v1_api.CoreV1Api()
 name = input('Set pod name: ')
 namespace = input('Set namespace: ')
