@@ -10,7 +10,7 @@ Configuration.set_default(c)
 api = core_v1_api.CoreV1Api()
 name = input('Set pod name: ')
 namespace = input('Set namespace: ')
-cmd = input('set command: ')
+cmd = input('Command: ')
 resp = api.read_namespaced_pod(name=name,namespace=namespace)
 exec_command = [
     '/bin/sh',
